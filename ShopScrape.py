@@ -8,8 +8,8 @@ import pandas as pd
 page_num = 1
 
 
-for i in range(10):
-    base_url = 'https://analyzify.com/shopify-stores'
+for i in range(10):  //since I only one ten pages of data
+    base_url = 'url_link'
     url = f'{base_url}/page/{page_num}'
 
     response = requests.get(url)
@@ -52,5 +52,6 @@ for i in range(10):
     df = pd.DataFrame(data)
     df.to_csv(filename, index =False)
     page_num += 1
-    print(filename)
+    print(filename)  //some visual help 
+
 
